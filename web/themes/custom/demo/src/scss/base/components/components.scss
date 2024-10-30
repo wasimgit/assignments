@@ -1,0 +1,65 @@
+p {
+    font-size: small;
+}
+
+.job-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid blue;
+    .job-wrapper-title {
+        text-align: center;
+        background-color: blue;
+        h2 {
+            margin: 0 0 15px 0;
+            color: white;
+        }
+    }
+    .jobs {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid lightgray;
+        :last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .job {
+            margin: 15px;
+            line-height: 1;
+        }
+        .job.job-close {
+            align-content: center;
+            span.close-icon {
+                padding: 5px 10px;
+                cursor: pointer;
+                color: white;
+                border-radius: 15%;
+                background-color: blue;
+                font-size: large;
+            }
+        }
+        .job.job-close.disabled {
+            span.close-icon {
+                cursor: not-allowed;
+                color: whitesmoke;
+                background-color: lightblue;
+            }
+        }
+        .job.job-title {
+            color: blue;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        .job.job-organisation {
+            color: grey;
+        }
+        .job.job-tags {
+            span {
+                padding: 8px 15px;
+                color: blue;
+                background-color: lightblue;
+            }
+        }
+    }
+}

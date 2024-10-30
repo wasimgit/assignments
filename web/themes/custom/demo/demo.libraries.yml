@@ -1,0 +1,42 @@
+# Global style
+global:
+  css:
+    base:
+      dist/css/base/base.css: {}
+      dist/css/base/typography.css: {}
+    layout:
+      dist/css/base/layout/layout.css: {}
+    component:
+      dist/css/base/components/components.css: {}
+  js:
+    dist/js/main.js: {}
+
+# Component styling
+card:
+  css:
+    component:
+      dist/css/component/card.css: {}
+
+# Page specific styles
+index:
+  css:
+    theme:
+      dist/css/theme/index.css: {}
+
+# Slider styles
+slick_slider:
+  remote: true
+  version: 1.8.1
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+  css:
+    theme:
+      # Add the Slick CSS file from the CDN
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css: {}
+  js:
+    # Add the Slick JS file from the CDN
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {}
+  dependencies:
+    - core/jquery

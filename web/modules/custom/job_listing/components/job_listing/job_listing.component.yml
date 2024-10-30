@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Job Listing
+description: A Job Listing component.
+props:
+  type: object
+  properties:
+    heading:
+      title: Heading
+      description: The title of the Job Listing.
+      type: string
+    location:
+      title: Location
+      description: The location name of the Job Listing item.
+      type: string
+    organisation:
+      title: Organisation
+      description: The organisation name of the Job Listing item.
+      type: string
+    tags:
+      title: Tags
+      description: The tags of the Job Listing item.
+      type: string

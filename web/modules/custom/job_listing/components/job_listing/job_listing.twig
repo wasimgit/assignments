@@ -1,0 +1,14 @@
+{% set job_titles_array = tags|split(',') %}
+<div class = "jobs">
+    <div class = "job job-title">{{heading}}</div>
+    <div class = "job job-location">{{location}}</div>
+    <div class = "job job-organisation">{{organisation}}</div>
+    <div class = "job job-tags">
+        {% for title in job_titles_array %}
+            <span>{{ title|trim }}</span>
+        {% endfor %}
+    </div>
+    <div class="job job-close {% if job.is_remote == 'True' %} disabled {% endif %}">
+        <span class="close-icon">×</span>
+    </div>
+</div>

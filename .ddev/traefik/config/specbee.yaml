@@ -1,0 +1,77 @@
+#ddev-generated
+# If you remove the ddev-generated line above you
+# are responsible for maintaining this file. DDEV will not then
+# update it, for example if you add `additional_hostnames`, etc.
+
+http:
+  routers:
+    specbee-web-80-http:
+      entrypoints:
+        - http-80
+      rule: HostRegexp(`^specbee\.ddev\.site$`)
+      
+      service: "specbee-web-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "specbee-redirectHttps"
+    specbee-web-8025-http:
+      entrypoints:
+        - http-8025
+      rule: HostRegexp(`^specbee\.ddev\.site$`)
+      
+      service: "specbee-web-8025"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "specbee-redirectHttps"
+    
+    
+    
+    specbee-web-80-https:
+      entrypoints:
+        - http-443
+      rule: HostRegexp(`^specbee\.ddev\.site$`)
+      
+      service: "specbee-web-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    specbee-web-8025-https:
+      entrypoints:
+        - http-8026
+      rule: HostRegexp(`^specbee\.ddev\.site$`)
+      
+      service: "specbee-web-8025"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+
+  middlewares:
+    specbee-redirectHttps:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    specbee-web-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-specbee-web:80
+        
+    specbee-web-8025:
+      loadbalancer:
+        servers:
+          - url: http://ddev-specbee-web:8025
+        
+    
+    
+    
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/specbee.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/specbee.key

@@ -1,0 +1,7 @@
+job_listing.specbee_job_listing:
+  path: '/job-listing'
+  defaults:
+    _controller: '\Drupal\job_listing\Controller\JobListingController::JobListingAction'
+    _title: 'Job Listing Specbee'
+  requirements:
+    _permission: 'access content'

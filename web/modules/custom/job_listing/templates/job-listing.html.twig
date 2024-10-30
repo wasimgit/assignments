@@ -1,0 +1,14 @@
+<div class = "job-wrapper">
+    <div class = "job-wrapper-title">
+        <h2>Looking for a Job</h2>
+    </div>
+    {% for job in jobs %}
+            {% include 'job_listing:job_listing' with {
+                heading: job.title,
+                location: job.location,
+                organisation: job.organisation,
+                tags: job.tags
+            }
+        %}
+    {% endfor %}
+</div>

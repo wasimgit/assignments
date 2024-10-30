@@ -1,0 +1,27 @@
+<div class="slider-component">
+  <div class="slider-content">
+    {% if image %}
+      <div class="slider-avatar">
+        {{ image }}
+      </div>
+    {% endif %}
+
+    <div class="slider-details">
+      {% if heading %}
+        <h5 class="slider-title">{{ heading }}</h5>
+      {% endif %}
+      {% if profile %}
+        <span class="slider-profile">{{ profile }}</span>
+      {% endif %}
+      {% if company %}
+        <span class="slider-company">{{ company }}</span>
+      {% endif %}
+    </div>
+
+    {% if body %}
+      <div class="slider-body">
+        {{ body }}
+      </div>
+    {% endif %}
+  </div>
+</div>

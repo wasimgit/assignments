@@ -1,0 +1,57 @@
+.speakerBlock {
+    padding:15px;
+    text-align: center;
+    background-color: white;
+
+    .block__title {
+        color: black;
+        font-size: medium;
+    }
+    
+    
+    .slider-component {
+        width: 90%;
+        margin: 15px;
+        padding:25px;
+        border-radius: 5%;
+        box-shadow: -1px 1px 10px rgb(100 100 100 / 20%);
+        .slider-avatar {
+            img {
+                margin: 0 auto;
+            }
+        }
+        .slider-details {
+            .slider-title {
+                margin: 10px 0;
+            }
+            .slider-profile, .slider-company {
+                font-size:x-small;
+            }
+            .slider-company {
+                color: gray;
+            }
+        }
+    }
+}
+
+.slick-next::before, .slick-prev::before {
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    background-color: lightgray;
+    box-shadow: -1px 1px 10px rgb(100 100 100 / 20%);
+}
+
+.field--name-field-button {
+    a {
+        padding: 10px 25px;
+        text-decoration: none;
+        color: white;
+        border-radius: 4%;
+        background-color: blue;
+    }
+}
+
+.slick-dots {
+    display: none !important;
+}

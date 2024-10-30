@@ -1,0 +1,23 @@
+{{ attach_library('demo/slick_slider') }}
+{% set layout = layout ? 'layout--' ~ layout|clean_class %}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    layout ? 'grid-full',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+    {% include 'demo:slider' with {
+        heading: label,
+        image: content.field_avatar,
+        profile: content.field_profile,
+        company: content.field_company,
+        body: content.body
+        }
+    %}
+</article>

@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Slider
+description: A slider component with title, avatar, company, profile, and body fields.
+props:
+  type: object
+  properties:
+    heading:
+      title: Heading
+      description: The title of the slider item.
+      type: string
+    image:
+      title: Slider Image
+      description: The Image of the slider item.
+      type: string
+    profile:
+      title: Profile
+      description: The profile name of the slider item.
+      type: string
+    company:
+      title: Company
+      description: The company name of the slider item.
+      type: string
+    body:
+      title: Body
+      description: The body of the slider item.
+      type: string
+
+# slots:
+#   body:
+#   title: Body
+#   required: true
